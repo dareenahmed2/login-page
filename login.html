@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#89f7fe,#66a6ff);
+  font-family:"Segoe UI",sans-serif;
+}
+.card{
+  width:360px;
+  padding:32px 28px;
+  border-radius:20px;
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,0.2);
+  border:1px solid rgba(255,255,255,0.4);
+  box-shadow:0 8px 32px rgba(0,0,0,0.2);
+  color:#fff;
+  text-align:center;
+}
+.card h2{
+  margin-bottom:20px;
+}
+label{
+  display:block;
+  margin:14px 0 6px;
+  text-align:left;
+  font-size:14px;
+}
+input[type="email"],
+input[type="password"]{
+  width:100%;
+  padding:12px 14px;
+  border:none;
+  border-radius:12px;
+  outline:none;
+  background:rgba(255,255,255,0.9);
+  font-size:14px;
+  color:#333;
+}
+button{
+  width:100%;
+  margin-top:24px;
+  padding:12px;
+  border:none;
+  border-radius:14px;
+  background:#4b6cb7;
+  background:linear-gradient(45deg,#4b6cb7,#182848);
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.25s;
+}
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+</style>
+</head>
+<body>
+
+  <main class="card">
+    <h2>Login</h2>
+    <form>
+      <label for="email">Your Email</label>
+      <input id="email" name="email" type="email"
+             placeholder="Your Email"
+             required
+             pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+             title="Must be a Gmail address (e.g. name@gmail.com)">
+
+      <label for="password">Your Password</label>
+      <input id="password" name="password" type="password"
+             placeholder="Your Password"
+             required
+             minlength="8"
+             pattern="(?=.*[A-Z])(?=.*\\d).{8,}"
+             title="At least 8 characters, one uppercase letter, and one number">
+
+      <button type="submit">Sign In</button>
+    </form>
+  </main>
+
+</body>
+</html>
